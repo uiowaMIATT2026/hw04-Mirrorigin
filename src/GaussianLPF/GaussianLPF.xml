@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+    <category>MIATT.HW04.jingmliang</category>
+    <title>Gaussian LPF</title>
+    <description>3D Gaussian Low-Pass Filter for HW04.</description>
+    <version>1.0.0</version>
+    <contributor>jingmliang</contributor>
+
+    <parameters>
+        <label>IO</label>
+        <description>Input/output parameters</description>
+        <image>
+            <name>inputVolume</name>
+            <longflag>inputVolume</longflag>
+            <label>Input Volume</label>
+            <channel>input</channel>
+            <description>Input noisy volume</description>
+        </image>
+        <image>
+            <name>outputVolume</name>
+            <longflag>outputVolume</longflag>
+            <label>Output Volume</label>
+            <channel>output</channel>
+            <description>Output smoothed volume</description>
+        </image>
+    </parameters>
+
+    <parameters>
+        <label>Filter Settings</label>
+        <description>Parameters for the Gaussian filter</description>
+        <float>
+            <name>sigma</name>
+            <longflag>sigma</longflag>
+            <label>Sigma</label>
+            <description>Sigma value for the Gaussian filter (applied to X, Y, Z)</description>
+            <default>2.5</default>
+        </float>
+    </parameters>
+</executable>
