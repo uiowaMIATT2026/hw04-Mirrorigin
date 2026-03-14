@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+    <category>MIATT.HW04.jingmliang</category>
+    <title>Gradient AD</title>
+    <description>Gradient Anisotropic Diffusion for HW04.</description>
+    <version>1.0.0</version>
+    <contributor>jingmliang</contributor>
+
+    <parameters>
+        <label>IO</label>
+        <description>Input/output parameters</description>
+        <image>
+            <name>inputVolume</name>
+            <longflag>inputVolume</longflag>
+            <label>Input Volume</label>
+            <channel>input</channel>
+            <description>Input volume</description>
+        </image>
+        <image>
+            <name>outputVolume</name>
+            <longflag>outputVolume</longflag>
+            <label>Output Volume</label>
+            <channel>output</channel>
+            <description>Output filtered volume</description>
+        </image>
+    </parameters>
+
+    <parameters>
+        <label>Filter Settings</label>
+        <description>Parameters for Gradient AD</description>
+        <float>
+            <name>conductance</name>
+            <longflag>conductance</longflag>
+            <label>Conductance</label>
+            <description>Conductance parameter</description>
+            <default>2.0</default>
+        </float>
+        <float>
+            <name>timeStep</name>
+            <longflag>timeStep</longflag>
+            <label>Time Step</label>
+            <description>Time step for diffusion</description>
+            <default>0.1</default>
+        </float>
+        <integer>
+            <name>iterations</name>
+            <longflag>iterations</longflag>
+            <label>Iterations</label>
+            <description>Number of iterations</description>
+            <default>5</default>
+        </integer>
+    </parameters>
+</executable>
