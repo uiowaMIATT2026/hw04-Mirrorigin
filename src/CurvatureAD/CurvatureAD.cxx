@@ -8,7 +8,7 @@ int main(int argc, char * argv[])
 {
   PARSE_ARGS;
 
-  using PixelType = float;
+  using PixelType = double;
   constexpr unsigned int Dimension = 3;
   using ImageType = itk::Image<PixelType, Dimension>;
 

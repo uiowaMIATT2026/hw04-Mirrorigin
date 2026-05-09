@@ -21,7 +21,7 @@ int main(int argc, char * argv[])
     std::cout << "Warning: Usually we want sigma2 > sigma1." << std::endl;
   }
 
-  using InternalPixelType = float;
+  using InternalPixelType = double;
   constexpr unsigned int Dimension = 3;
   using InternalImageType = itk::Image<InternalPixelType, Dimension>;
   using OutputPixelType = unsigned char;

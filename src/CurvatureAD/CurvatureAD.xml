@@ -27,27 +27,42 @@
 
     <parameters>
         <label>Filter Settings</label>
-        <description>Parameters for Gradient AD</description>
-        <float>
+        <description>Parameters for the Curvature Anisotropic Diffusion filter</description>
+        <double>
             <name>conductance</name>
             <longflag>conductance</longflag>
             <label>Conductance</label>
-            <description>Conductance parameter</description>
+            <description>Conductance parameter controlling the diffusion rate. Higher values preserve fewer edges.</description>
             <default>2.0</default>
-        </float>
-        <float>
+            <constraints>
+                <minimum>0.0</minimum>
+                <maximum>10.0</maximum>
+                <step>0.1</step>
+            </constraints>
+        </double>
+        <double>
             <name>timeStep</name>
             <longflag>timeStep</longflag>
             <label>Time Step</label>
-            <description>Time step for diffusion</description>
+            <description>Time step for the diffusion process. For 3D images, it should be less than 0.125 for stability.</description>
             <default>0.1</default>
-        </float>
+            <constraints>
+                <minimum>0.0</minimum>
+                <maximum>0.125</maximum>
+                <step>0.01</step>
+            </constraints>
+        </double>
         <integer>
             <name>iterations</name>
             <longflag>iterations</longflag>
             <label>Iterations</label>
-            <description>Number of iterations</description>
+            <description>Number of iterations to run the diffusion process.</description>
             <default>5</default>
+            <constraints>
+                <minimum>1</minimum>
+                <maximum>100</maximum>
+                <step>1</step>
+            </constraints>
         </integer>
     </parameters>
 </executable>

@@ -27,20 +27,30 @@
 
     <parameters>
         <label>Filter Settings</label>
-        <description>Sigma parameters for DOG</description>
-        <float>
+        <description>Sigma parameters for Difference of Gaussians filter</description>
+        <double>
             <name>sigma1</name>
             <longflag>sigma1</longflag>
             <label>Sigma 1</label>
-            <description>First Gaussian sigma</description>
+            <description>Standard deviation for the first Gaussian kernel. Typically the smaller sigma.</description>
             <default>2.5</default>
-        </float>
-        <float>
+            <constraints>
+                <minimum>0.1</minimum>
+                <maximum>10.0</maximum>
+                <step>0.1</step>
+            </constraints>
+        </double>
+        <double>
             <name>sigma2</name>
             <longflag>sigma2</longflag>
             <label>Sigma 2</label>
-            <description>Second Gaussian sigma</description>
+            <description>Standard deviation for the second Gaussian kernel. Typically the larger sigma.</description>
             <default>3.5</default>
-        </float>
+            <constraints>
+                <minimum>0.1</minimum>
+                <maximum>10.0</maximum>
+                <step>0.1</step>
+            </constraints>
+        </double>
     </parameters>
 </executable>

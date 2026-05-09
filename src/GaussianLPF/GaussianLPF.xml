@@ -27,13 +27,18 @@
 
     <parameters>
         <label>Filter Settings</label>
-        <description>Parameters for the Gaussian filter</description>
-        <float>
+        <description>Parameters for the Gaussian low-pass filter</description>
+        <double>
             <name>sigma</name>
             <longflag>sigma</longflag>
             <label>Sigma</label>
-            <description>Sigma value for the Gaussian filter (applied to X, Y, Z)</description>
+            <description>Sigma value (standard deviation) for the Gaussian filter, applied equally to X, Y, and Z directions. Controls the amount of smoothing.</description>
             <default>2.5</default>
-        </float>
+            <constraints>
+                <minimum>0.1</minimum>
+                <maximum>10.0</maximum>
+                <step>0.1</step>
+            </constraints>
+        </double>
     </parameters>
 </executable>
