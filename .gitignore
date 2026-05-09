@@ -39,5 +39,6 @@ cmake-travis-*
 CMakeCache.txt
 CMakeFiles/*
 crash*
+build/
 
 Testing/Temporary/LastTest.log
